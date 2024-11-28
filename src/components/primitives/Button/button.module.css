@@ -1,15 +1,18 @@
 .default {
   background-color: #fff;
   color: #000;
-  padding: 0.5rem 1rem;
-  border-radius: 0.25rem;
-  border: 1px solid #000;
   cursor: pointer;
 }
 
 .default:active {
   background-color: #000;
   color: #fff;
+}
+
+.default:disabled {
+  background-color: #ccc;
+  color: #000;
+  cursor: not-allowed;
 }
 
 .primary {
@@ -25,4 +28,19 @@
 .destructive {
   background-color: #dc3545;
   color: #fff;
+}
+
+.small {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+}
+
+.medium {
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+}
+
+.large {
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
 }
