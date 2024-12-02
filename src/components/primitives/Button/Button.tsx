@@ -10,7 +10,7 @@ export type ButtonProps = ComponentProps<"button"> & {
 export const Button = ({ variant, size = "medium", ...props }: ButtonProps) => {
   return (
     <button
-      className={`${styles.default} ${styles[variant]} ${styles[size]}`}
+      className={`${styles.default} ${styles[variant]} ${styles[size]} `}
       {...props}
     />
   );
