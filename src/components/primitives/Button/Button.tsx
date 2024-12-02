@@ -1,17 +1,12 @@
 import { ComponentProps } from "react";
+import { variants, type ButtonVariants } from "./button-variants";
 
-import styles from "./button.module.css";
+export type ButtonProps = ComponentProps<"button"> & ButtonVariants;
 
-export type ButtonProps = ComponentProps<"button"> & {
-  variant: "primary" | "secondary" | "destructive";
-  size?: "small" | "medium" | "large";
-};
-
-export const Button = ({ variant, size = "medium", ...props }: ButtonProps) => {
-  return (
-    <button
-      className={`${styles.default} ${styles[variant]} ${styles[size]} `}
-      {...props}
-    />
-  );
+export const Button = ({
+  variant = "primary",
+  size = "medium",
+  ...props
+}: ButtonProps) => {
+  return <button className={variants({ variant, size })} {...props} />;
 };
