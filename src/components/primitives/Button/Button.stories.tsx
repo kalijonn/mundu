@@ -11,6 +11,12 @@ const meta = {
   argTypes: {
     disabled: {
       control: "boolean",
+      name: "Disabled",
+    },
+    variant: {
+      control: "select",
+      options: ["primary", "secondary", "destructive"],
+      name: "Variant",
     },
   },
 } satisfies Meta;
